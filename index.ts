@@ -27,3 +27,13 @@ class UserAccount{
 
 const user: User = new UserAccount(1, "Viramelia")
 console.log(user)
+
+const createUser = (params: User): User =>{
+    const newUser = {
+        ...params
+    }
+
+    return newUser
+}
+
+console.log(createUser({id: 3, fullName: 'Gunso'}))
