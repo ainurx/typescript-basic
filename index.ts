@@ -37,3 +37,10 @@ const createUser = (params: User): User =>{
 }
 
 console.log(createUser({id: 3, fullName: 'Gunso'}))
+
+type Semester = "Ganjil" | "Genap"
+
+let semester: Semester
+
+semester = "Ganjil"
+console.log(semester)
