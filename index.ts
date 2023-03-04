@@ -44,3 +44,8 @@ let semester: Semester
 
 semester = "Ganjil"
 console.log(semester)
+
+type StringArray = Array<{ name: string }>
+
+const students:StringArray = [{name: "Ato"}, {name: "Mabar"}, {name: "Fachri"}]
+
