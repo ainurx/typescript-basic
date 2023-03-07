@@ -1,51 +1,30 @@
-let firstName = 'ainur'
-let age: number
-age = 24
-
-console.log(`Halo ${firstName}`)
-
-// create interface to define key types for obj
-interface User{
-    id: number,
-    fullName: string
-}
-
-const newUser: User = {
-    id: 1,
-    fullName: 'Ainur Rahmat'
-} 
-
-class UserAccount{
-    id: number
-    fullName: string
-    
-    constructor(id: number, fullName: string){
-        this.id = id
-        this.fullName = fullName
-    }
-}
-
-const user: User = new UserAccount(1, "Viramelia")
-console.log(user)
-
-const createUser = (params: User): User =>{
-    const newUser = {
-        ...params
-    }
-
-    return newUser
-}
-
-console.log(createUser({id: 3, fullName: 'Gunso'}))
-
 type Semester = "Ganjil" | "Genap"
+type EntryYear = 2017 | 2018 | 2019 | 2020 | 2021 | 2022
+type Department = "Teknik Informatika" | "Teknik PWK" | "Sistem Informasi"
 
-let semester: Semester
+interface Student {
+    fullName: string,
+    semester: Semester,
+    address: string,
+    phone: string,
+    entryYear: EntryYear,
+    department: Department
+}
 
-semester = "Ganjil"
-console.log(semester)
+class StudentAccount {
+    fullName: string
+    semester: Semester
+    address: string
+    phone: string
+    entryYear: EntryYear
+    department: Department
 
-type StringArray = Array<{ name: string }>
-
-const students:StringArray = [{name: "Ato"}, {name: "Mabar"}, {name: "Fachri"}]
-
+    constructor(fullName: string, semester: Semester, address: string, phone: string, entryYear: EntryYear, department: Department ){
+        this.fullName = fullName
+        this.semester = semester
+        this.address = address
+        this.phone = phone
+        this.entryYear = entryYear
+        this.department = department
+    }
+}
